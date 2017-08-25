@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Haiblog博客系统</title>
+    <link rel="stylesheet" href="{$_layui}/css/layui.css">
+    <style>
+        .hai-iframe{position:absolute;border:0;width:100%;height:100%;}
+        .hai-footer{text-align:center;}
+        .hai-logo{color:#009688;}
+    </style>
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo"><a href="{:url('Base/main')}" target="main" class="hai-logo">Haiblog博客系统</a></div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item layui-this"><a href="#"><i class="layui-icon">&#xe705;</i>&nbsp;内容管理</a></li>
+            <li class="layui-nav-item"><a href="#"><i class="layui-icon">&#xe609;</i>&nbsp;碎言评论</a></li>
+            <li class="layui-nav-item"><a href="#"><i class="layui-icon">&#xe640;</i>&nbsp;回收管理</a></li>
+            <li class="layui-nav-item"><a href="#"><i class="layui-icon">&#xe613;</i>&nbsp;用户管理</a></li>
+            <li class="layui-nav-item"><a href="#"><i class="layui-icon">&#xe614;</i>&nbsp;网站设置</a></li>
+            <span class="layui-nav-bar" style="left: 68px; top: 55px; width: 0px; opacity: 0;"></span>
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    贤心
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">退了</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree">
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:;">文章管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="{:url('Article/add')}" target="main">添加文章</a></dd>
+                        <dd><a href="{:url('Article/index')}" target="main">文章列表</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">标签管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="{:url('Tag/add')}" target="main">添加标签</a></dd>
+                        <dd><a href="{:url('Tag/index')}" target="main">标签列表</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">分类管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="{:url('Category/add')}" target="main">添加分类</a></dd>
+                        <dd><a href="{:url('Category/index')}" target="main">分类列表</a></dd>
+                    </dl>
+                </li>
+            </ul>
+            <ul class="layui-nav layui-nav-tree layui-hide">
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:;">评论管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="{:url('Comment/index')}" target="main">评论列表</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">随言碎语</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="{:url('Chat/add')}" target="main">添加碎言</a></dd>
+                        <dd><a href="{:url('Chat/index')}" target="main">碎言列表</a></dd>
+                    </dl>
+                </li>
+            </ul>
+            <ul class="layui-nav layui-nav-tree layui-hide">
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:;">回收管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="{:url('Recycle/article')}" target="main">已删文章</a></dd>
+                        <dd><a href="{:url('Recycle/comment')}" target="main">已删评论</a></dd>
+                        <dd><a href="{:url('Recycle/chat')}" target="main">已删碎言</a></dd>
+                        <dd><a href="{:url('Recycle/link')}" target="main">已删友链</a></dd>
+                    </dl>
+                </li>
+            </ul>
+            <ul class="layui-nav layui-nav-tree layui-hide">
+                <li class="layui-nav-item">
+                    <a class="" href="{:url('User/index')}" target="main">用户管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">第三方用户</a></dd>
+                    </dl>
+                </li>
+            </ul>
+            <ul class="layui-nav layui-nav-tree layui-hide">
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:;">基本设置</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="{:url('Config/index')}" target="main">系统信息</a></dd>
+                        <dd><a href="javascript:;" target="main">修改密码</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:;">友情链接</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" target="main">添加友链</a></dd>
+                        <dd><a href="javascript:;" target="main">友链列表</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <iframe class="hai-iframe" src="{:url('base/main')}" name="main"></iframe>
+        <!--<div style="padding: 15px;">内容主体区域</div>-->
+    </div>
+
+    <div class="layui-footer hai-footer">
+        <!-- 底部固定区域 -->
+        2017 © Haiblog
+    </div>
+</div>
+<script src="{$_layui}/layui.js"></script>
+<script>
+    //JavaScript代码区域
+    layui.use(['element','jquery'], function(){
+        var element = layui.element;
+        var $ = layui.jquery;
+        $('.layui-layout-left .layui-nav-item').click(function(){
+            var index = $(this).index('.layui-layout-left .layui-nav-item');
+            $('.layui-side-scroll .layui-nav').addClass('layui-hide');
+            console.log($('.layui-side-scroll .layui-nav:eq('+index+')').removeClass('layui-hide'));
+        });
+    });
+</script>
+</body>
+</html>

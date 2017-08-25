@@ -1,0 +1,40 @@
+{extend name="base/common" /}
+{block name="body"}
+<div class="hai-body">
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>已删文章</legend>
+    </fieldset>
+    <table class="layui-table">
+        <colgroup>
+            <col width="10">
+            <col width="100">
+            <col width="200">
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+        <tr>
+            <th>aid</th>
+            <th>所属栏目</th>
+            <th>作者</th>
+            <th>标题</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>测试分类</td>
+            <td>贤心</td>
+            <td>贤心</td>
+            <td>
+                <button class="layui-btn layui-btn-mini"><i class="layui-icon">&#xe642;</i>编辑</button>
+                <button class="layui-btn layui-btn-mini layui-btn-danger"><i class="layui-icon">&#xe640;</i>删除</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+{/block}
+{block name="js"}
+{/block}

@@ -1,0 +1,206 @@
+{extend name="base/common" /}
+{block name="body"}
+<div class="layui-tab">
+    <ul class="layui-tab-title">
+        <li class="layui-this">网站设置</li>
+        <li>优化推广</li>
+        <li>文章水印</li>
+        <li>第三方登录</li>
+        <li>其他第三方接口</li>
+        <li>邮箱设置</li>
+        <li>评论设置</li>
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">
+            <form class="layui-form layui-form-pane" action="">
+                <div class="layui-form-item" pane="">
+                    <label class="layui-form-label">网站状态</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="is_original" value="是" title="是" checked="">
+                        <input type="radio" name="is_original" value="否" title="否">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">网站关闭时提示文字</label>
+                    <div class="layui-input-block">
+                        <textarea placeholder="网站关闭时提示文字" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">备案号</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" autocomplete="off" placeholder="备案号" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">站长邮箱</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" autocomplete="off" placeholder="站长邮箱" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item" style="text-align: center;">
+                    <button class="layui-btn" lay-submit="" lay-filter="demo2">保存</button>
+                    <input type="reset" class="layui-btn" value="重置">
+                </div>
+            </form>
+        </div>
+        <div class="layui-tab-item">
+            <form class="layui-form layui-form-pane" action="">
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">网站名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" autocomplete="off" placeholder="网站名" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">网站关键字</label>
+                    <div class="layui-input-block">
+                        <textarea placeholder="网站关键字" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">网站描述</label>
+                    <div class="layui-input-block">
+                        <textarea placeholder="网站描述" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">默认作者</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="author" lay-verify="required" placeholder="请输入默认作者" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">文章保留版权提示</label>
+                    <div class="layui-input-block">
+                        <textarea placeholder="文章保留版权提示" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">文章图片title和alt内容</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" autocomplete="off" placeholder="文章图片title和alt内容" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item" style="text-align: center;">
+                    <button class="layui-btn" lay-submit="" lay-filter="demo2">保存</button>
+                    <input type="reset" class="layui-btn" value="重置">
+                </div>
+            </form>
+        </div>
+        <div class="layui-tab-item">
+            <form class="layui-form layui-form-pane" action="">
+
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">备案号</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" autocomplete="off" placeholder="备案号" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">备案号</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" autocomplete="off" placeholder="备案号" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item" style="text-align: center;">
+                    <button class="layui-btn" lay-submit="" lay-filter="demo2">保存</button>
+                    <input type="reset" class="layui-btn" value="重置">
+                </div>
+            </form>
+        </div>
+        <div class="layui-tab-item">
+            <form class="layui-form layui-form-pane" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">QQ登录APPID</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="title" placeholder="QQ登录APPID" autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">QQ登录APPID</div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">QQ登录APPKEY</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" autocomplete="off" placeholder="QQ登录APPKEY" class="layui-input">
+                    </div>
+                </div>
+
+                <hr/>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">新浪微博登录API KEY</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" autocomplete="off" placeholder="QQ登录APPID" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">新浪微博登录SECRET</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" autocomplete="off" placeholder="QQ登录APPKEY" class="layui-input">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="layui-tab-item">内容5</div>
+    </div>
+</div>
+{/block}
+{block name="js"}
+<script>
+    layui.use('element', function(){
+        var $ = layui.jquery
+                ,element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+
+        //触发事件
+        var active = {
+            tabAdd: function(){
+                //新增一个Tab项
+                element.tabAdd('demo', {
+                    title: '新选项'+ (Math.random()*1000|0) //用于演示
+                    ,content: '内容'+ (Math.random()*1000|0)
+                    ,id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下
+                })
+            }
+            ,tabDelete: function(othis){
+                //删除指定Tab项
+                element.tabDelete('demo', '44'); //删除：“商品管理”
+
+
+                othis.addClass('layui-btn-disabled');
+            }
+            ,tabChange: function(){
+                //切换到指定Tab项
+                element.tabChange('demo', '22'); //切换到：用户管理
+            }
+        };
+
+        $('.site-demo-active').on('click', function(){
+            var othis = $(this), type = othis.data('type');
+            active[type] ? active[type].call(this, othis) : '';
+        });
+
+        //Hash地址的定位
+        var layid = location.hash.replace(/^#test=/, '');
+        element.tabChange('test', layid);
+
+        element.on('tab(test)', function(elem){
+            location.hash = 'test='+ $(this).attr('lay-id');
+        });
+
+    });
+</script>
+{/block}
